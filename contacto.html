@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Virtus Leonis 3D</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            padding: 0 10%;
+        }
+
+        .contact-info {
+            background-color: var(--gris-futurista);
+            padding: 40px;
+            border-radius: 10px;
+            border: 1px solid var(--azul-neon);
+        }
+
+        .contact-info h3 {
+            color: var(--morado-neon);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .contact-method {
+            margin-bottom: 30px;
+        }
+
+        .contact-method h4 {
+            color: var(--azul-neon);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-method p {
+            color: #aaa;
+            margin-left: 30px;
+        }
+
+        .contact-form {
+            background-color: var(--gris-futurista);
+            padding: 40px;
+            border-radius: 10px;
+            border: 1px solid var(--morado-neon);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--azul-neon);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--azul-neon);
+            border-radius: 5px;
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: linear-gradient(to right, var(--azul-neon), var(--morado-neon));
+            color: black;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .map-container {
+            margin-top: 50px;
+            height: 400px;
+            background-color: var(--azul-oscuro);
+            border: 1px solid var(--morado-neon);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--azul-neon);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navegación -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Virtus Leonis 3D</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="proyectos.html">Projects</a>
+                <a href="acerca-de.html" class="active">About</a>
+                <a href="contacto.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+<!-- Hero Section -->
+<section class="hero" style="height: 50vh;">
+    <div class="main-title">
+        <h1>CONTACT US</h1>
+        <p>We are ready to take your ideas to the next level</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section-container">
+    <div class="contact-container">
+        <div class="contact-info fade-in">
+            <h3>CONTACT INFORMATION</h3>
+            
+            <div class="contact-method">
+                <h4>✉️ Email</h4>
+                <p>Contact: virtusleonis3@gmail.com</p>
+            </div>
+            
+            <div class="contact-method">
+                <h4>🕒 Hours</h4>
+                <p>Monday to Friday: 9:00 AM - 6:00 PM</p>
+                <p>Saturdays: 10:00 AM - 2:00 PM</p>
+            </div>
+        </div>
+        
+        <div class="contact-form fade-in">
+            <h3>SEND US A MESSAGE</h3>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">SEND MESSAGE</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-about">
+                <div class="footer-logo">Virtus Leonis 3D</div>
+                <p>Leaders in innovative software development and digital solutions.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="proyectos.html">Projects</a></li>
+                    <li><a href="acerca-de.html">About</a></li>
+                    <li><a href="contacto.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 Virtus Leonis 3D. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

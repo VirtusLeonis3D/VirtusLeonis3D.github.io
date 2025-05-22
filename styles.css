@@ -1,0 +1,254 @@
+:root {
+    --azul-oscuro: #0a0a2a;
+    --azul-neon: #00f0ff;
+    --morado-neon: #b300ff;
+    --negro: #000000;
+    --gris-futurista: #1a1a2e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: var(--negro);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* NAVEGACIÓN */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(10, 10, 42, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--morado-neon);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--azul-neon);
+    text-shadow: 0 0 10px var(--azul-neon);
+    animation: pulse 2s infinite alternate;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: var(--azul-neon);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--morado-neon);
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, var(--azul-oscuro) 0%, var(--negro) 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/fondo-futurista.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.1;
+}
+
+.main-title h1 {
+    font-size: 4rem;
+    margin: 0;
+    background: linear-gradient(to right, var(--azul-neon), var(--morado-neon));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: titleGlow 3s infinite alternate;
+}
+
+.main-title p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #ccc;
+}
+
+/* SECCIÓN COMÚN */
+.section-container {
+    padding: 100px 10%;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--azul-neon);
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    padding: 50px 10%;
+    background-color: var(--azul-oscuro);
+    border-top: 1px solid var(--morado-neon);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.footer-logo {
+    font-size: 1.8rem;
+    color: var(--azul-neon);
+    margin-bottom: 20px;
+}
+
+.footer-links h3 {
+    color: var(--morado-neon);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--azul-neon);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(179, 0, 255, 0.2);
+    color: #666;
+}
+
+/* ANIMACIONES */
+@keyframes pulse {
+    from { text-shadow: 0 0 10px var(--azul-neon); }
+    to { text-shadow: 0 0 20px var(--azul-neon), 0 0 30px var(--morado-neon); }
+}
+
+@keyframes titleGlow {
+    from { opacity: 0.8; }
+    to { opacity: 1; }
+}
+
+@keyframes placeholderPulse {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+/* Galería en cuadrícula animada */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--gris-futurista);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.gallery-item img {
+    width: 77%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.4s cubic-bezier(.25,.8,.25,1);
+}
+
+.gallery-item span {
+    padding: 18px 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    transition: background 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px) scale(1.04);
+    box-shadow: 0 8px 32px var(--azul-neon);
+    z-index: 2;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08) rotate(-1deg);
+}
+
+.gallery-item:hover span {
+    background: var(--azul-neon);
+    color: var(--negro);
+}
+

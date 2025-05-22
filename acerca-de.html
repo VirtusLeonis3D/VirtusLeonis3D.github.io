@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Virtus Leonis 3D</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            color: var(--azul-neon);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .team-section {
+            margin-top: 80px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .team-member {
+            background-color: var(--gris-futurista);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--azul-neon);
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .member-image {
+            height: 250px;
+            background-color: var(--azul-oscuro);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--azul-neon);
+            border-bottom: 1px solid var(--morado-neon);
+        }
+
+        .member-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .member-info h3 {
+            color: var(--azul-neon);
+            margin-bottom: 5px;
+        }
+
+        .member-info p {
+            color: var(--morado-neon);
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .member-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .member-social a {
+            color: #aaa;
+            transition: color 0.3s;
+        }
+
+        .member-social a:hover {
+            color: var(--azul-neon);
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin: 80px 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 30px;
+            background-color: var(--gris-futurista);
+            border-radius: 10px;
+            border: 1px solid var(--morado-neon);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            color: var(--azul-neon);
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Virtus Leonis 3D</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="proyectos.html">Projects</a>
+                <a href="acerca-de.html" class="active">About</a>
+                <a href="contacto.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="height: 60vh;">
+        <div class="main-title">
+            <h1>ABOUT US</h1>
+            <p>Discover the story behind Virtus Leonis 3D</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section-container">
+        <div class="about-content fade-in">
+            <h2>OUR STORY</h2>
+            <p>Virtus Leonis 3D was born on March 8, 2025, from the vision of a group of software development enthusiasts seeking to revolutionize the way businesses create and use digital solutions. From our humble beginnings in a small studio in Boulder, Colorado, we have become a benchmark in software development in the United States.</p>
+            
+            <p>Our name, which means "The Courage of the Lion" in Latin, reflects our bold and innovative approach to every project. We believe that the courage to explore new ideas is what has allowed us to stand out in an increasingly competitive market.</p>
+            
+            <p>Today, with a team of more than 20 software development professionals, we have completed more than 150 projects for clients in 15 countries, always maintaining our commitment to quality and technological innovation.</p>
+        </div>
+
+        <!-- Statistics -->
+        <div class="stats-container fade-in">
+            <div class="stat-card">
+                <div class="stat-number">3+</div>
+                <div class="stat-label">Years of Experience</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">150+</div>
+                <div class="stat-label">Completed Projects</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Professionals</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Countries</div>
+            </div>
+        </div>
+
+        <!-- Team -->
+        <div class="team-section">
+            <h2 class="section-title">OUR TEAM</h2>
+            <div class="team-grid">
+                
+                <!-- Member 1 -->
+                <div class="team-member fade-in">
+                    <div class="member-image">
+                     <img src="Leon-logo-blanco (1).png" width="200" alt="Service 1">
+                    </div>
+                    <div class="member-info">
+                        <h3>Rafael.M</h3>
+                        <p>CEO & Founder</p>
+                        <div class="member-social">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="team-member fade-in">
+                    <div class="member-image">
+                       <img src="Leon-logo-blanco (1).png" width="200" alt="Service 1">
+                    </div>
+                    <div class="member-info">
+                        <h3>Cesar.M</h3>
+                        <p>Development Lead</p>
+                        <div class="member-social">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-about">
+                <div class="footer-logo">Virtus Leonis 3D</div>
+                <p>Leaders in innovative software development and digital solutions.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="proyectos.html">Projects</a></li>
+                    <li><a href="acerca-de.html">About</a></li>
+                    <li><a href="contacto.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 Virtus Leonis 3D. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
